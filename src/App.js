@@ -1,3 +1,4 @@
+/*import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -22,4 +23,17 @@ function App() {
   );
 }
 
-export default App;
+export default App;*/
+import Page from './pages/Login';
+import React from 'react';
+import { BrowserRouter, Router, Switch, Route } from 'react-router-dom';import Auth from 'containers/Auth';import HomePage from '../HomePage';
+
+export default function App() {
+  return(
+    <Switch>
+      <Route exact path="/"component={Page} />
+      <Route path='/Dashboard' component={HomePage}/>
+      </Switch>
+
+  );
+}
